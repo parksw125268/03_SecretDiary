@@ -10,6 +10,8 @@
         android:id="@+id/numPicker1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@+id/numPicker2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -18,12 +20,14 @@
         app:layout_constraintStart_toEndOf="@+id/numPicker1"
         app:layout_constraintTop_toTopOf="@id/numPicker1"
         android:layout_width="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/numPicker3"
         android:layout_height="wrap_content"/>
 
     <NumberPicker
         android:id="@+id/numPicker3"
         app:layout_constraintStart_toEndOf="@+id/numPicker2"
         app:layout_constraintTop_toTopOf="@id/numPicker1"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
