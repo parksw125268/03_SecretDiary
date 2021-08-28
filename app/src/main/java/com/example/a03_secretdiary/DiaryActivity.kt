@@ -27,7 +27,7 @@ class DiaryActivity: AppCompatActivity() {
         //쓰레드 기능 이용 //아래는 변경할 때마다 저장함. 그게아니라 뭔가 하다가 멈칫 했을때만 저장 하도록. 병경
 
         val runnable  = Runnable {
-             getSharedPreferences("diary", Context.MODE_PRIVATE).edit {
+             getSharedPreferences("detail", MODE_PRIVATE).edit {
                  putString("detail", privateText.text.toString())
              }
         }
