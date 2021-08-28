@@ -1,6 +1,7 @@
 package com.example.a03_secretdiary
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -54,9 +55,7 @@ class MainActivity : AppCompatActivity() {
             val pwPreference = getSharedPreferences("password", Context.MODE_PRIVATE)//preference파일을 다른 앱과 share해서 사용하도록 해주는 함수. //MODEPRIVATE으로 이 앱에서만 사용하겟따.
             val passwordFromUser = "${numPicker1.value}${numPicker2.value}${numPicker3.value}" //입력하려는 pw
             if(pwPreference.getString("pw","000").equals(passwordFromUser)) {//password파일안에 pw라는 키로 초기값 "000"으로  저장.
-                //성공
-                //TODO 다이어리 페이지 작성 후에 넘겨줘야 함.
-                //startActivity()
+                startActivity(Intent(this,DiaryActivity::class.java))
             } else {//실패
                 showErrorPopup()
             }
